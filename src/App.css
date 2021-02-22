@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40vh;
   pointer-events: none;
 }
 
@@ -11,6 +11,48 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:0.2; }
+  25%  { opacity:0.8; }
+  100% { opacity:0.6; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:0.2; }
+  25%  { opacity:0.8; }
+  100% { opacity:0.6; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:0.2; }
+  25%  { opacity:0.8; }
+  100% { opacity:0.6; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:0.2; }
+  25%  { opacity:0.8; }
+  100% { opacity:0.6; }
+}
+
+.App-logo-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#282c34;
+  gap: 12px;
+  -webkit-animation: flickerAnimation 0.4s ;
+  -moz-animation: flickerAnimation 0.4s ;
+  -o-animation: flickerAnimation 0.4s ;
+   animation: flickerAnimation 0.4s ;
+}
+
+.App-logo-container span {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 3px 1px rgba(0, 0, 0, 0.14))
+          drop-shadow(0 1px 5px rgba(0, 0, 0, 0.12))
+          drop-shadow(0 -1px 2px rgba(0, 0, 0, 0.1));
 }
 
 .App-header {
